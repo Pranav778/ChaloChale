@@ -3,13 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Destinations - ChaloChale</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" href="index.html">
+                        <i class="fa-solid fa-plane-departure"></i> ChaloChale
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="destinations.html">Destinations</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="package.html">Package</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="booking.html">Booking</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                        </ul>
+                        <a href="signup.html" class="btn btn-warning ms-lg-3">SignUp</a>
+                        <a href="login.html" class="btn btn-warning ms-lg-3">login</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <section class="py-5 bg-light text-center">
+        <div class="container">
+            <h1 class="fw-bold">Top Destinations</h1>
+            <p class="lead">Explore amazing destinations with ChaloChale Travel app</p>
+        </div>
+    </section>
+    
+    <div class="container card-container">
+        <div class="row">
+            <!-- Manali Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="images/manali.jpg" class="card-img-top" alt="Manali">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Manali</h5>
+                        <p class="card-text">Discover the breathtaking beauty of Manali with snow-capped mountains and serene valleys.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                            Book Now <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Agra Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="images/agra.jpg" class="card-img-top" alt="Agra">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Agra</h5>
+                        <p class="card-text">Experience the timeless beauty of the Taj Mahal and explore the rich Mughal heritage.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                            Book Now <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Delhi Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="images/delhi.jpg" class="card-img-top" alt="Delhi">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Delhi</h5>
+                        <p class="card-text">Explore the vibrant capital city with its blend of ancient history and modern culture.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                            Book Now <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Goa Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="images/goa.jpg" class="card-img-top" alt="Goa">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Goa</h5>
+                        <p class="card-text">Relax on pristine beaches and enjoy the vibrant nightlife of India's party capital.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                            Book Now <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalLabel">Book Your Trip</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+               <div class="modal-body">
+    <form>
+        <div class="row g-3">
+            <!-- Full Name and Email -->
+            <div class="col-md-6">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" placeholder="Enter your name">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Enter your email">
+            </div>
+            
+            <!-- Select Destination and Travel Date -->
+            <div class="col-md-6">
+                <label class="form-label">Select Destination</label>
+                <select class="form-select">
+                    <option selected>Goa</option>
+                    <option value="1">Manali</option>
+                    <option value="2">Agra</option>
+                    <option value="3">Delhi</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Travel Date</label>
+                <input type="date" class="form-control">
+            </div>
+
+            <!-- Number of People -->
+            <div class="col-12">
+                <label class="form-label">Number of People</label>
+                <input type="number" class="form-control" placeholder="Enter number of people">
+            </div>
+
+            <!-- Message / Requirement -->
+            <div class="col-12">
+                <label class="form-label">Message / Requirement</label>
+                <textarea class="form-control" rows="3" placeholder="Enter any travel requirement"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-success w-100">Submit Booking Request</button>
+</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="alert('Booking is confirmed')">Confirm Booking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     
 </body>
 </html>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-plane-departure me-2"></i>ChaloChale</h5>
+                    <p>Your trusted travel partner for exploring the most beautiful destinations in India. We make your travel dreams come true with personalized packages and exceptional service.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="package.html">Packages</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Popular Destinations</h5>
+                    <ul>
+                        <li><a href="destinations.html">Manali</a></li>
+                        <li><a href="destinations.html">Agra</a></li>
+                        <li><a href="destinations.html">Delhi</a></li>
+                        <li><a href="destinations.html">Goa</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i>123 Travel Street, Mumbai, India</li>
+                        <li><i class="fas fa-phone me-2"></i>+91 98765 43210</li>
+                        <li><i class="fas fa-envelope me-2"></i>info@chalochale.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ChaloChale. All rights reserved. | Designed with <i class="fas fa-heart text-danger"></i> for Travelers</p>
+            </div>
+        </div>
+    </footer>
