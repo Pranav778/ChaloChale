@@ -1,0 +1,91 @@
+/* Destinations Page Specific Styles */
+
+/* Container for cards */
+.card-container {
+    padding: 2rem;
+}
+
+.card-container .row {
+    margin-bottom: 3rem;
+}
+
+.card-container .row:last-child {
+    margin-bottom: 0;
+}
+
+/* Destinations Card Styles */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    background: white;
+    height: 100%;
+    margin-bottom: 2rem;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-body {
+    padding: 1.5rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.card-title {
+    font-weight: 700;
+    color: #1e3c72;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.card-text {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.card-img-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover .card-img-wrapper::after {
+    opacity: 1;
+}
+
+/* Destinations Responsive Design */
+@media (max-width: 767px) {
+    .card-img-top {
+        height: 180px;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+}
